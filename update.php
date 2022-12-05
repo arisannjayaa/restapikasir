@@ -8,10 +8,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nama           = $_POST["nama"];
     $jumlah         = $_POST["jumlah"];
     $harga          = $_POST["harga"];
-    $total_bayar    = $_POST["total_bayar"];
     $tgl_pembelian  = $_POST["tgl_pembelian"];
 
-    $query = "UPDATE tb_barang SET nama_barang='$nama', jumlah='$jumlah', harga='$harga', total_bayar='$total_bayar' WHERE id='$id'";
+    $query = "UPDATE tb_barang SET nama_barang='$nama', jumlah='$jumlah', harga='$harga' WHERE id='$id'";
     $eksekusi = mysqli_query($conn, $query);
     $cek = mysqli_affected_rows($conn);
 

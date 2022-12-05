@@ -13,10 +13,8 @@ if ($cek > 0) {
     while ($get = mysqli_fetch_object($eksekusi)) {
         $var["kode_barang"] = $get->kode_barang;
         $var["nama_barang"] = $get->nama_barang;
-        $var["jumlah"] = $get->jumlah;
-        $var["harga"] = $get->harga;
-        $var["total_bayar"] = $get->total_bayar;
-        $var["tgl_pembelian"] = $get->tgl_pembelian;
+        $var["jumlah"] = $get->jumlah_barang;
+        $var["harga"] = $get->harga_barang;
 
         array_push($response["data"], $var);
     }
